@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/PS2020/Easy_1_1/Stack.cpp">
+			<Option target="Easy_1_1"/>
+		</Unit>
+		<Unit filename="D:/PS2020/Easy_1_1/Stack.hpp">
+			<Option target="Easy_1_1"/>
+		</Unit>
 		<Unit filename="D:/PS2020/Easy_1_1/main.cpp">
 			<Option target="Easy_1_1"/>
 		</Unit>

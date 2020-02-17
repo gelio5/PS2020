@@ -77,17 +77,38 @@ CMakeFiles\Easy_1_1.dir\main.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Easy_1_1.dir\main.cpp.s /c D:\PS2020\Easy_1_1\main.cpp
 <<
 
+CMakeFiles\Easy_1_1.dir\Stack.cpp.obj: CMakeFiles\Easy_1_1.dir\flags.make
+CMakeFiles\Easy_1_1.dir\Stack.cpp.obj: ..\Stack.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\PS2020\Easy_1_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Easy_1_1.dir/Stack.cpp.obj"
+	"D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\Hostx86\x86\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Easy_1_1.dir\Stack.cpp.obj /FdCMakeFiles\Easy_1_1.dir\ /FS -c D:\PS2020\Easy_1_1\Stack.cpp
+<<
+
+CMakeFiles\Easy_1_1.dir\Stack.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Easy_1_1.dir/Stack.cpp.i"
+	"D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\Hostx86\x86\cl.exe" > CMakeFiles\Easy_1_1.dir\Stack.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\PS2020\Easy_1_1\Stack.cpp
+<<
+
+CMakeFiles\Easy_1_1.dir\Stack.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Easy_1_1.dir/Stack.cpp.s"
+	"D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\Hostx86\x86\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Easy_1_1.dir\Stack.cpp.s /c D:\PS2020\Easy_1_1\Stack.cpp
+<<
+
 # Object files for target Easy_1_1
 Easy_1_1_OBJECTS = \
-"CMakeFiles\Easy_1_1.dir\main.cpp.obj"
+"CMakeFiles\Easy_1_1.dir\main.cpp.obj" \
+"CMakeFiles\Easy_1_1.dir\Stack.cpp.obj"
 
 # External object files for target Easy_1_1
 Easy_1_1_EXTERNAL_OBJECTS =
 
 Easy_1_1.exe: CMakeFiles\Easy_1_1.dir\main.cpp.obj
+Easy_1_1.exe: CMakeFiles\Easy_1_1.dir\Stack.cpp.obj
 Easy_1_1.exe: CMakeFiles\Easy_1_1.dir\build.make
 Easy_1_1.exe: CMakeFiles\Easy_1_1.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\PS2020\Easy_1_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Easy_1_1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\PS2020\Easy_1_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Easy_1_1.exe"
 	"D:\Program Files\JetBrains\CLion 2019.2.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\Easy_1_1.dir --rc="D:\Windows Kits\10\bin\10.0.18362.0\x86\rc.exe" --mt="D:\Windows Kits\10\bin\10.0.18362.0\x86\mt.exe" --manifests  -- "D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\Hostx86\x86\link.exe" /nologo @CMakeFiles\Easy_1_1.dir\objects1.rsp @<<
  /out:Easy_1_1.exe /implib:Easy_1_1.lib /pdb:D:\PS2020\Easy_1_1\cmake-build-debug\Easy_1_1.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

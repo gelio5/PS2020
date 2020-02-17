@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Easy_1_1.dir/Stack.cpp.obj"
   "CMakeFiles/Easy_1_1.dir/main.cpp.obj"
   "Easy_1_1.exe"
   "Easy_1_1.exe.manifest"

@@ -3,4 +3,4 @@ project(Easy_1_1)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Easy_1_1 main.cpp)
+add_executable(Easy_1_1 main.cpp Stack.cpp Stack.hpp)
