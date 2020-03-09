@@ -2,26 +2,26 @@
 // Created by vlrez on 17.02.2020.
 //
 
-#include "Stack.hpp"
+#include "Stack.h"
 
 #include <utility>
 
-Stack::Stack() {
+Stack::Stack(){
     this -> stack = new std::string[this -> MaxSize];
-    this ->counter = 0;
+    this -> counter = 0;
 }
 
-Stack::Stack(std::string a) {
+Stack::Stack(int size) {
+    this -> MaxSize = size;
     this -> stack = new std::string[this -> MaxSize];
-    this -> stack[0] = std::move(a);
-    this -> counter = 1;
+    this -> counter = 0;
 }
 
-void Stack::Push(std::string a) {
-    if (this -> counter < 20)
+void Stack::Push(std::string element) {
+    if (this -> counter < MaxSize)
     {
         this -> counter++;
-        this -> stack[this -> counter - 1] = std::move(a);
+        this -> stack[this -> counter - 1] = std::move(element);
     } else
         throw std::exception("Stack Overflow");
 }

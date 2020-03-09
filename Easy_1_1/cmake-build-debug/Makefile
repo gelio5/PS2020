@@ -57,6 +57,30 @@ CMAKE_BINARY_DIR = D:\PS2020\Easy_1_1\cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/local
+install\local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	echo >nul && "D:\Program Files\JetBrains\CLion 2019.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install\local
+
+# Special rule for the target install/local
+install\local\fast: preinstall\fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	echo >nul && "D:\Program Files\JetBrains\CLion 2019.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install\local\fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	echo >nul && "D:\Program Files\JetBrains\CLion 2019.2.1\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install\fast: preinstall\fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	echo >nul && "D:\Program Files\JetBrains\CLion 2019.2.1\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install\fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -78,6 +102,16 @@ rebuild_cache:
 rebuild_cache\fast: rebuild_cache
 
 .PHONY : rebuild_cache\fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components\fast: list_install_components
+
+.PHONY : list_install_components\fast
 
 # The main all target
 all: cmake_check_build_system
@@ -124,59 +158,137 @@ Easy_1_1\fast:
 	$(MAKE) -f CMakeFiles\Easy_1_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Easy_1_1.dir\build
 .PHONY : Easy_1_1\fast
 
-Stack.obj: Stack.cpp.obj
+#=============================================================================
+# Target rules for targets named Stack
 
-.PHONY : Stack.obj
+# Build rule for target.
+Stack: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) Stack
+.PHONY : Stack
+
+# fast build rule for target.
+Stack\fast:
+	$(MAKE) -f src\CMakeFiles\Stack.dir\build.make /nologo -$(MAKEFLAGS) src\CMakeFiles\Stack.dir\build
+.PHONY : Stack\fast
+
+#=============================================================================
+# Target rules for targets named simple_test
+
+# Build rule for target.
+simple_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) simple_test
+.PHONY : simple_test
+
+# fast build rule for target.
+simple_test\fast:
+	$(MAKE) -f src\tests\CMakeFiles\simple_test.dir\build.make /nologo -$(MAKEFLAGS) src\tests\CMakeFiles\simple_test.dir\build
+.PHONY : simple_test\fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main\fast:
+	$(MAKE) -f gtest\googlemock\CMakeFiles\gmock_main.dir\build.make /nologo -$(MAKEFLAGS) gtest\googlemock\CMakeFiles\gmock_main.dir\build
+.PHONY : gmock_main\fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock\fast:
+	$(MAKE) -f gtest\googlemock\CMakeFiles\gmock.dir\build.make /nologo -$(MAKEFLAGS) gtest\googlemock\CMakeFiles\gmock.dir\build
+.PHONY : gmock\fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest\fast:
+	$(MAKE) -f gtest\googletest\CMakeFiles\gtest.dir\build.make /nologo -$(MAKEFLAGS) gtest\googletest\CMakeFiles\gtest.dir\build
+.PHONY : gtest\fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main\fast:
+	$(MAKE) -f gtest\googletest\CMakeFiles\gtest_main.dir\build.make /nologo -$(MAKEFLAGS) gtest\googletest\CMakeFiles\gtest_main.dir\build
+.PHONY : gtest_main\fast
+
+src\Stack.obj: src\Stack.cpp.obj
+
+.PHONY : src\Stack.obj
 
 # target to build an object file
-Stack.cpp.obj:
-	$(MAKE) -f CMakeFiles\Easy_1_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Easy_1_1.dir\Stack.cpp.obj
-.PHONY : Stack.cpp.obj
+src\Stack.cpp.obj:
+	$(MAKE) -f CMakeFiles\Easy_1_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Easy_1_1.dir\src\Stack.cpp.obj
+.PHONY : src\Stack.cpp.obj
 
-Stack.i: Stack.cpp.i
+src\Stack.i: src\Stack.cpp.i
 
-.PHONY : Stack.i
+.PHONY : src\Stack.i
 
 # target to preprocess a source file
-Stack.cpp.i:
-	$(MAKE) -f CMakeFiles\Easy_1_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Easy_1_1.dir\Stack.cpp.i
-.PHONY : Stack.cpp.i
+src\Stack.cpp.i:
+	$(MAKE) -f CMakeFiles\Easy_1_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Easy_1_1.dir\src\Stack.cpp.i
+.PHONY : src\Stack.cpp.i
 
-Stack.s: Stack.cpp.s
+src\Stack.s: src\Stack.cpp.s
 
-.PHONY : Stack.s
+.PHONY : src\Stack.s
 
 # target to generate assembly for a file
-Stack.cpp.s:
-	$(MAKE) -f CMakeFiles\Easy_1_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Easy_1_1.dir\Stack.cpp.s
-.PHONY : Stack.cpp.s
+src\Stack.cpp.s:
+	$(MAKE) -f CMakeFiles\Easy_1_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Easy_1_1.dir\src\Stack.cpp.s
+.PHONY : src\Stack.cpp.s
 
-main.obj: main.cpp.obj
+src\tests\test.obj: src\tests\test.cpp.obj
 
-.PHONY : main.obj
+.PHONY : src\tests\test.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) -f CMakeFiles\Easy_1_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Easy_1_1.dir\main.cpp.obj
-.PHONY : main.cpp.obj
+src\tests\test.cpp.obj:
+	$(MAKE) -f CMakeFiles\Easy_1_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Easy_1_1.dir\src\tests\test.cpp.obj
+.PHONY : src\tests\test.cpp.obj
 
-main.i: main.cpp.i
+src\tests\test.i: src\tests\test.cpp.i
 
-.PHONY : main.i
+.PHONY : src\tests\test.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles\Easy_1_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Easy_1_1.dir\main.cpp.i
-.PHONY : main.cpp.i
+src\tests\test.cpp.i:
+	$(MAKE) -f CMakeFiles\Easy_1_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Easy_1_1.dir\src\tests\test.cpp.i
+.PHONY : src\tests\test.cpp.i
 
-main.s: main.cpp.s
+src\tests\test.s: src\tests\test.cpp.s
 
-.PHONY : main.s
+.PHONY : src\tests\test.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles\Easy_1_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Easy_1_1.dir\main.cpp.s
-.PHONY : main.cpp.s
+src\tests\test.cpp.s:
+	$(MAKE) -f CMakeFiles\Easy_1_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Easy_1_1.dir\src\tests\test.cpp.s
+.PHONY : src\tests\test.cpp.s
 
 # Help Target
 help:
@@ -185,14 +297,23 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... Easy_1_1
+	@echo ... install/local
+	@echo ... install
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... Stack.obj
-	@echo ... Stack.i
-	@echo ... Stack.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... list_install_components
+	@echo ... Stack
+	@echo ... simple_test
+	@echo ... gmock_main
+	@echo ... gmock
+	@echo ... gtest
+	@echo ... gtest_main
+	@echo ... src/Stack.obj
+	@echo ... src/Stack.i
+	@echo ... src/Stack.s
+	@echo ... src/tests/test.obj
+	@echo ... src/tests/test.i
+	@echo ... src/tests/test.s
 .PHONY : help
 
 

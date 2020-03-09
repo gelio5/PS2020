@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/PS2020/Easy_1_1/Stack.cpp" "D:/PS2020/Easy_1_1/cmake-build-debug/CMakeFiles/Easy_1_1.dir/Stack.cpp.obj"
-  "D:/PS2020/Easy_1_1/main.cpp" "D:/PS2020/Easy_1_1/cmake-build-debug/CMakeFiles/Easy_1_1.dir/main.cpp.obj"
+  "D:/PS2020/Easy_1_1/src/Stack.cpp" "D:/PS2020/Easy_1_1/cmake-build-debug/CMakeFiles/Easy_1_1.dir/src/Stack.cpp.obj"
+  "D:/PS2020/Easy_1_1/src/tests/test.cpp" "D:/PS2020/Easy_1_1/cmake-build-debug/CMakeFiles/Easy_1_1.dir/src/tests/test.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 

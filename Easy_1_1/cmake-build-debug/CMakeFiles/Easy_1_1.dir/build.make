@@ -58,54 +58,54 @@ include CMakeFiles\Easy_1_1.dir\progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles\Easy_1_1.dir\flags.make
 
-CMakeFiles\Easy_1_1.dir\main.cpp.obj: CMakeFiles\Easy_1_1.dir\flags.make
-CMakeFiles\Easy_1_1.dir\main.cpp.obj: ..\main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\PS2020\Easy_1_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Easy_1_1.dir/main.cpp.obj"
+CMakeFiles\Easy_1_1.dir\src\Stack.cpp.obj: CMakeFiles\Easy_1_1.dir\flags.make
+CMakeFiles\Easy_1_1.dir\src\Stack.cpp.obj: ..\src\Stack.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\PS2020\Easy_1_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Easy_1_1.dir/src/Stack.cpp.obj"
 	"D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\Hostx86\x86\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Easy_1_1.dir\main.cpp.obj /FdCMakeFiles\Easy_1_1.dir\ /FS -c D:\PS2020\Easy_1_1\main.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Easy_1_1.dir\src\Stack.cpp.obj /FdCMakeFiles\Easy_1_1.dir\ /FS -c D:\PS2020\Easy_1_1\src\Stack.cpp
 <<
 
-CMakeFiles\Easy_1_1.dir\main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Easy_1_1.dir/main.cpp.i"
-	"D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\Hostx86\x86\cl.exe" > CMakeFiles\Easy_1_1.dir\main.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\PS2020\Easy_1_1\main.cpp
+CMakeFiles\Easy_1_1.dir\src\Stack.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Easy_1_1.dir/src/Stack.cpp.i"
+	"D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\Hostx86\x86\cl.exe" > CMakeFiles\Easy_1_1.dir\src\Stack.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\PS2020\Easy_1_1\src\Stack.cpp
 <<
 
-CMakeFiles\Easy_1_1.dir\main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Easy_1_1.dir/main.cpp.s"
+CMakeFiles\Easy_1_1.dir\src\Stack.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Easy_1_1.dir/src/Stack.cpp.s"
 	"D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\Hostx86\x86\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Easy_1_1.dir\main.cpp.s /c D:\PS2020\Easy_1_1\main.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Easy_1_1.dir\src\Stack.cpp.s /c D:\PS2020\Easy_1_1\src\Stack.cpp
 <<
 
-CMakeFiles\Easy_1_1.dir\Stack.cpp.obj: CMakeFiles\Easy_1_1.dir\flags.make
-CMakeFiles\Easy_1_1.dir\Stack.cpp.obj: ..\Stack.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\PS2020\Easy_1_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Easy_1_1.dir/Stack.cpp.obj"
+CMakeFiles\Easy_1_1.dir\src\tests\test.cpp.obj: CMakeFiles\Easy_1_1.dir\flags.make
+CMakeFiles\Easy_1_1.dir\src\tests\test.cpp.obj: ..\src\tests\test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\PS2020\Easy_1_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Easy_1_1.dir/src/tests/test.cpp.obj"
 	"D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\Hostx86\x86\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Easy_1_1.dir\Stack.cpp.obj /FdCMakeFiles\Easy_1_1.dir\ /FS -c D:\PS2020\Easy_1_1\Stack.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Easy_1_1.dir\src\tests\test.cpp.obj /FdCMakeFiles\Easy_1_1.dir\ /FS -c D:\PS2020\Easy_1_1\src\tests\test.cpp
 <<
 
-CMakeFiles\Easy_1_1.dir\Stack.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Easy_1_1.dir/Stack.cpp.i"
-	"D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\Hostx86\x86\cl.exe" > CMakeFiles\Easy_1_1.dir\Stack.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\PS2020\Easy_1_1\Stack.cpp
+CMakeFiles\Easy_1_1.dir\src\tests\test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Easy_1_1.dir/src/tests/test.cpp.i"
+	"D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\Hostx86\x86\cl.exe" > CMakeFiles\Easy_1_1.dir\src\tests\test.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\PS2020\Easy_1_1\src\tests\test.cpp
 <<
 
-CMakeFiles\Easy_1_1.dir\Stack.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Easy_1_1.dir/Stack.cpp.s"
+CMakeFiles\Easy_1_1.dir\src\tests\test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Easy_1_1.dir/src/tests/test.cpp.s"
 	"D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\Hostx86\x86\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Easy_1_1.dir\Stack.cpp.s /c D:\PS2020\Easy_1_1\Stack.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Easy_1_1.dir\src\tests\test.cpp.s /c D:\PS2020\Easy_1_1\src\tests\test.cpp
 <<
 
 # Object files for target Easy_1_1
 Easy_1_1_OBJECTS = \
-"CMakeFiles\Easy_1_1.dir\main.cpp.obj" \
-"CMakeFiles\Easy_1_1.dir\Stack.cpp.obj"
+"CMakeFiles\Easy_1_1.dir\src\Stack.cpp.obj" \
+"CMakeFiles\Easy_1_1.dir\src\tests\test.cpp.obj"
 
 # External object files for target Easy_1_1
 Easy_1_1_EXTERNAL_OBJECTS =
 
-Easy_1_1.exe: CMakeFiles\Easy_1_1.dir\main.cpp.obj
-Easy_1_1.exe: CMakeFiles\Easy_1_1.dir\Stack.cpp.obj
+Easy_1_1.exe: CMakeFiles\Easy_1_1.dir\src\Stack.cpp.obj
+Easy_1_1.exe: CMakeFiles\Easy_1_1.dir\src\tests\test.cpp.obj
 Easy_1_1.exe: CMakeFiles\Easy_1_1.dir\build.make
 Easy_1_1.exe: CMakeFiles\Easy_1_1.dir\objects1.rsp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\PS2020\Easy_1_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Easy_1_1.exe"

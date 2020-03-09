@@ -4,24 +4,24 @@
 
 #include <string>
 
-#ifndef EASY_1_1_STACK_HPP
-#define EASY_1_1_STACK_HPP
+#ifndef EASY_1_1_STACK_H
+#define EASY_1_1_STACK_H
 
 
 class Stack {
 public:
     Stack();
-    Stack(std::string a);
-    void Push(std::string a);
+    explicit Stack(int size);
+    void Push(std::string element);
     int Size();
     int ContainedNumber();
     void Pop();
     std::string* Front();
 private:
-    const int MaxSize = 20;
+    int MaxSize = 20;
     int counter;
     std::string* stack;
 };
 
 
-#endif //EASY_1_1_STACK_HPP
+#endif //EASY_1_1_STACK_H

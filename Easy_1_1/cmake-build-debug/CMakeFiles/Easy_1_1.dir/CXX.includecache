@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/PS2020/Easy_1_1/src/tests/test.cpp
+gtest/gtest.h
+-
+Stack
+D:/PS2020/Easy_1_1/src/tests/Stack
+

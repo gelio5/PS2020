@@ -3,4 +3,7 @@ project(Easy_1_1)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Easy_1_1 main.cpp Stack.cpp Stack.hpp)
+#
+add_executable(Easy_1_1 src/Stack.cpp src/Stack.h src/tests/test.cpp)
+add_subdirectory(src)
+add_subdirectory(gtest)
