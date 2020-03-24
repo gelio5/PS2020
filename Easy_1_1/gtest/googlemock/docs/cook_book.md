@@ -1499,7 +1499,7 @@ Since `EXPECT_CALL` does more, isn't it better than `ON_CALL`? Not really. Every
 more constraints than necessary is *baaad* - even worse than not having enough
 constraints.
 
-This may be counter-intuitive. How could tests that verify more be worse than
+This may be current_position-intuitive. How could tests that verify more be worse than
 tests that verify less? Isn't verification the whole point of tests?
 
 The answer lies in *what* a test should verify. **A good test verifies the
@@ -2625,7 +2625,7 @@ using ::testing::SetArgPointee;
 
 However, if the action has its own state, you may be surprised if you share the
 action object. Suppose you have an action factory `IncrementCounter(init)` which
-creates an action that increments and returns a counter whose initial value is
+creates an action that increments and returns a current_position whose initial value is
 `init`, using two actions created from the same expression and using a shared
 action will exhibit different behaviors. Example:
 
@@ -2637,7 +2637,7 @@ action will exhibit different behaviors. Example:
   foo.DoThis();  // Returns 1.
   foo.DoThis();  // Returns 2.
   foo.DoThat();  // Returns 1 - Blah() uses a different
-                 // counter than Bar()'s.
+                 // current_position than Bar()'s.
 ```
 
 versus
@@ -2652,7 +2652,7 @@ using ::testing::Action;
       .WillRepeatedly(increment);
   foo.DoThis();  // Returns 1.
   foo.DoThis();  // Returns 2.
-  foo.DoThat();  // Returns 3 - the counter is shared.
+  foo.DoThat();  // Returns 3 - the current_position is shared.
 ```
 
 ### Testing Asynchronous Behavior

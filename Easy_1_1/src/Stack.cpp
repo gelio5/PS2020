@@ -6,39 +6,34 @@
 
 #include <utility>
 
-Stack::Stack(){
-    this -> stack = new std::string[this -> MaxSize];
-    this -> counter = 0;
-}
-
 Stack::Stack(int size) {
-    this -> MaxSize = size;
-    this -> stack = new std::string[this -> MaxSize];
-    this -> counter = 0;
+    this -> max_size = size;
+    this -> stack = new std::string[this -> max_size];
 }
 
 void Stack::Push(std::string element) {
-    if (this -> counter < MaxSize)
+    if (this -> current_position < max_size)
     {
-        this -> counter++;
-        this -> stack[this -> counter - 1] = std::move(element);
+        this -> current_position++;
+        this -> stack[this -> current_position - 1] = std::move(element);
     } else
+    {
         throw std::exception("Stack Overflow");
+    }
 }
 
-int Stack::Size() {
-    return this -> MaxSize;
+int Stack::Size() const {
+    return this -> max_size;
 }
 
-int Stack::ContainedNumber() {
-    return this -> counter;
+int Stack::ContainedNumber() const {
+    return this -> current_position;
 }
 
 void Stack::Pop() {
-    this -> stack[this -> counter - 1] = "";
-    this -> counter--;
+    --(this -> current_position);
 }
 
 std::string *Stack::Front() {
-    return &this -> stack[this -> counter - 1];
+    return &this -> stack[this -> current_position - 1];
 }

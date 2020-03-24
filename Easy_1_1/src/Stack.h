@@ -1,27 +1,19 @@
 //
 // Created by vlrez on 17.02.2020.
 //
-
+#pragma once
 #include <string>
-
-#ifndef EASY_1_1_STACK_H
-#define EASY_1_1_STACK_H
-
 
 class Stack {
 public:
-    Stack();
-    explicit Stack(int size);
+    Stack(int size = 20);
     void Push(std::string element);
-    int Size();
-    int ContainedNumber();
+    int Size() const;
+    int ContainedNumber() const;
     void Pop();
     std::string* Front();
 private:
-    int MaxSize = 20;
-    int counter;
+    int max_size = 20;
+    int current_position = 0;
     std::string* stack;
 };
-
-
-#endif //EASY_1_1_STACK_H

@@ -7,6 +7,37 @@ TEST(Easy_1_1, sizeStack)
     ASSERT_EQ(b.Size(), 20);
     auto a = Stack(30);
     ASSERT_EQ(a.Size(), 30);
+}
+
+TEST(Easy_1_1, pushTest)
+{
+    auto a = Stack(30);
+    ASSERT_EQ(a.ContainedNumber(), 0);
+    a.Push("abc");
+    ASSERT_EQ(a.ContainedNumber(), 1);
+    for (int i = 0; i <= a.Size(); ++i){
+        try {
+            a.Push(std::string("agh"));
+        }
+        catch (std::exception b){
+            ASSERT_EQ(std::string(b.what()), std::string("Stack Overflow"));
+        }
+    }
+    ASSERT_EQ(a.Size(), 30);
+}
+
+TEST(Easy_1_1, popTest)
+{
+    auto a = Stack();
+    a.Push("abc");
+    ASSERT_EQ(a.ContainedNumber(), 1);
+    a.Pop();
+    ASSERT_EQ(a.ContainedNumber(), 0);
+}
+
+TEST(Easy_1_1, frontTest)
+{
+    auto a = Stack(30);
     ASSERT_EQ(a.ContainedNumber(), 0);
     a.Push("abc");
     ASSERT_EQ(a.ContainedNumber(), 1);
@@ -17,18 +48,7 @@ TEST(Easy_1_1, sizeStack)
     a.Pop();
     ASSERT_EQ(a.ContainedNumber(), 1);
     ASSERT_EQ(std::string("abc"), *a.Front());
-    for (int i = 0; i <a.Size(); ++i){
-        try {
-            a.Push(std::string("agh"));
-        }
-        catch (std::exception b){
-            ASSERT_EQ(std::string(b.what()), std::string("Stack Overflow"));
-        }
-    }
-    ASSERT_EQ(a.Size(), 30);
-    ASSERT_TRUE(true);
 }
-
 int main(int argc, char* argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
