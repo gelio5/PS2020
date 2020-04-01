@@ -15,15 +15,19 @@ TEST(Easy_1_1, pushTest)
     ASSERT_EQ(a.ContainedNumber(), 0);
     a.Push("abc");
     ASSERT_EQ(a.ContainedNumber(), 1);
-    for (int i = 0; i <= a.Size(); ++i){
+}
+
+TEST(Easy_1_1, pushExceptionTest)
+{
+    auto a = Stack();
+    for (int i = 0; i < (a.Size() + 1); ++i){
         try {
             a.Push(std::string("agh"));
         }
-        catch (std::exception b){
+        catch (std::length_error b){
             ASSERT_EQ(std::string(b.what()), std::string("Stack Overflow"));
         }
     }
-    ASSERT_EQ(a.Size(), 30);
 }
 
 TEST(Easy_1_1, popTest)

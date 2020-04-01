@@ -5,6 +5,7 @@
 #include "Stack.h"
 
 #include <utility>
+#include <stdexcept>
 
 Stack::Stack(int size) {
     this -> max_size = size;
@@ -18,7 +19,7 @@ void Stack::Push(std::string element) {
         this -> stack[this -> current_position - 1] = std::move(element);
     } else
     {
-        throw std::exception("Stack Overflow");
+        throw std::length_error("Stack Overflow");
     }
 }
 
