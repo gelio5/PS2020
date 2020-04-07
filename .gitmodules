@@ -1,0 +1,3 @@
+[submodule "Easy_1_2/gtest"]
+	path = Easy_1_2/gtest
+	url = https://github.com/google/googletest
