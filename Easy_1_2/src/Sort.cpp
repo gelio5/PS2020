@@ -4,17 +4,41 @@
 
 #include "Sort.h"
 
-template<typename T> bool less(T arg1, T arg2)
+struct Node *newNode(int item)
 {
-    return arg1 <= arg2;
+    auto *temp = new Node;
+    temp->key = item;
+    temp->left = temp->right = nullptr;
+    return temp;
 }
 
-template<typename T> bool greater(T arg1, T arg2)
+void storeSorted(Node *root, int arr[], int &i)
 {
-    return arg1 > arg2;
+    if (root != nullptr)
+    {
+        storeSorted(root->left, arr, i);
+        arr[i++] = root->key;
+        storeSorted(root->right, arr, i);
+    }
 }
 
-bool less(int arg1, int arg2)
+Node* insert(Node* node, int key)
 {
-    return arg1 <= arg2;
+    if (node == nullptr)
+        return newNode(key);
+    if (less(key, node->key))
+        node->left  = insert(node->left, key);
+    else if (greater(key, node->key))
+        node->right = insert(node->right, key);
+    return node;
+}
+
+void treeSort(int arr[], int n)
+{
+    struct Node *root = nullptr;
+    root = insert(root, arr[0]);
+    for (int i=1; less(i, n); i++)
+        root = insert(root, arr[i]);
+    int i = 0;
+    storeSorted(root, arr, i);
 }
