@@ -1,9 +1,4 @@
-//
-// Created by vlrez on 07.04.2020.
-//
-
 #pragma once
-//#include <iostream>
 
 template<typename T> bool less(T arg1, T arg2)
 {
